@@ -1085,7 +1085,7 @@ TheDemo PROC NEAR
          VSYNC
          call Mode13x               ; 384x564 256 colors Chained
                                     ; (no more Tweaked ... snif )
-
+									
          mov     dx,3c4h            ; Screen Off
          mov     al,01h
          out     dx,al
@@ -1094,12 +1094,17 @@ TheDemo PROC NEAR
          or      al,100000y
          out     dx,al
 
+		 ; https://github.com/joncampbell123/dosbox-x/issues/66
+		 ; https://github.com/joncampbell123/dosbox-x/commit/721f08f5b263d836ffe401bd214fb966eca71b0a
+		 ; https://studfile.net/preview/894286/
+		 mov     dx,3dah			; fix panning bug higlighted by DOSBox community
+         in      al,dx		        ; read 3DAh to reset latch and set 3c0h to address mode
        
-         mov     dx,3c0h            ; Pixel Panning Compatibility...
-         mov     al,30h
-         out     dx,al
-         inc     dl
-         in      al,dx
+         mov     dx,3c0h            ; Pixel Panning Compatibility... (Index register)
+         mov     al,30h             ; 10h + keep screen output enabled
+         out     dx,al              ; Set index
+         inc     dl                 ; Read address
+         in      al,dx              ; Get mode control register
          dec     dl
          or      al,00100000y
          out     dx,al
