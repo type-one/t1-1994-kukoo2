@@ -1,0 +1,15 @@
+toolchain to build MS-DOS 16 bit executables
+
+to build asm files jwasm.exe is needed with -mz flag
+
+https://www.japheth.de/JWasm.html
+
+-> works on Windows, Linux and MS-DOS
+
+pklite compressor to squeeze the executable
+
+http://fileformats.archiveteam.org/wiki/PKLITE
+
+-> works on MS-DOS (i.e. DOSBox)
+-> pklite kukoo2.exe 
+

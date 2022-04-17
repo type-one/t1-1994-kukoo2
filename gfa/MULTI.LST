@@ -1,0 +1,43 @@
+
+SCREEN 18
+'
+OPEN "o",#1,"c:\masm\data\multi.xy"
+'
+n%=0
+'
+p1=1
+p2=0
+
+FOR i=0 TO  511
+  '
+
+  a=i/512*360
+  x%=192+TRUNC(COSQ(4*a)*192)  /* 41 */
+  y%=282+TRUNC(SINQ(5*a)*282/2)   /* 4 */
+  '
+  p%=SHR(384,2)*(64+1)+y%*SHR(36*2,2)+SHR(x%,2)
+  b1%=SHR(p%,8) AND &hff
+  b2%=p% AND &hff
+  b3%=SHL(x% AND 3,1)
+  '
+  IF (n% MOD 7)=0
+    IF n%<>0
+      PRINT #1;b1%;",";b2%;",";b3%
+    ENDIF
+    PRINT #1;" db ";
+  ELSE
+    PRINT #1;b1%;",";b2%;",";b3%;",";
+  ENDIF
+  INC n%
+  '
+  PLOT x%,y%
+  '
+NEXT i
+'
+
+PRINT #1;"0";
+CLOSE #1
+'
+SCREEN 3
+EDIT
+'

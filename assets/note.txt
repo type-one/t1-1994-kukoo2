@@ -1,0 +1,23 @@
+Some assets I could find back on my old HDD drive backup.
+
+LBM extension is for Deluxe Paint II IFF file format (256 colors), a popular painting software 
+that existed on Amiga, MS-DOS PC and Atari ST.  In the 90s I was using the MS-DOS version.
+I did some conversions in BMP format.
+
+I've put also a playable version of Thomas Mogensen (Drax) "Crooner" Adlib music, in VGM and in D00.
+You can play it with some dedicated chiptune players with VGM or AdPlug extensions, like XMPlay.
+
+To convert the LBM pictures to includable data, I was using "alchemy" to convert pictures to raw
+and then a GFA program to read the raw file and transform it to includable ASM ascii.
+
+https://www.uselesssoftware.com/download/alch162-zip
+
+Recoil library allows to load these legacy picture formats that were popular in the 80s and early
+90s.
+
+https://sourceforge.net/projects/recoil/
+http://grafx2.chez.com/index.php?categorie2/history
+
+The last asset in the intro is an ANSI logo edited with a program called "TheDraw"
+
+https://winworldpc.com/product/the-draw/4x

@@ -1,0 +1,40 @@
+'
+SCREEN $12
+'
+a=0
+oy=0
+FOR p=2 TO SQR(89)+1  ' STEP 0.25
+  '
+  y=p^2
+  '
+  'IF ROUND(y)>ROUND(oy)
+  FOR x=0 TO 383 STEP 0.01  ' 0.0005
+    COLOR (((x DIV 1)+a) MOD 16) '+256-37-16
+    LINE x,oy,(x-384/2)*2+384/2,y
+  NEXT x
+  'ENDIF
+
+  '
+  a=a XOR 8
+  oy=y
+  '
+NEXT p
+'
+REPEAT
+UNTIL INKEY$=CHR$(27)
+'
+OPEN "o",#1,"c:\masm\data\gfx\damrol.asc"
+FOR i%=0 TO 3
+  FOR y%=0 TO 89
+    FOR x%=i% TO 380+i% STEP 4
+      PRINT #1;" db ";PTST(x%,y%)+256-37-16
+      COLOR 0
+      PLOT x%,y%
+    NEXT x%
+  NEXT y%
+NEXT i%
+CLOSE #1
+'
+SCREEN 3
+EDIT
+'

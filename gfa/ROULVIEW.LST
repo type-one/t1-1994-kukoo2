@@ -1,0 +1,58 @@
+
+SCREEN $13
+'
+DIM x(7),y%(7)
+'
+OPEN "o",#1,"c:\masm\data\rolax.y"
+'
+n%=0
+'
+FOR i%=0 TO  255 '127 '511
+  '
+  '  CLS
+  '
+  a=i%/512*360
+  '
+  FOR j%=0 TO 5 ' 7
+    x(j%)=COSQ(2*a+j%*13)*(128-16) ' 10
+    y%(j%)=TRUNC(128-8+SINQ(4*a+j%*13)*(128-16)) '+SHL(j%+1,16) ' 10
+    ''    PLOT 128+x(j%),y%(j%)
+  NEXT j%
+  QSORT x(),6,y%() ' 8
+
+  FOR j%=0 TO 5 '7
+    '
+    '    COLOR SHR(y%(j%),16)
+    '  FOR kl%=0 TO 7
+    '  COLOR 16+kl%+1
+    '  LINE 0,70+(y%(j%) AND $ffff)/2+kl%,319,70+(y%(j%) AND $ffff)/2+kl%
+    'NEXT kl%
+    PRINT #1;" dw ";y%(j%)*4
+
+    '    PRINT "(";ROUND(x(j%));",";y%(j%);")";
+
+    '    IF (n% MOD 6)=0
+    '    IF n%<>0
+    '    PRINT #1;y%(j%)*4
+    '  ENDIF
+    '    PRINT #1;" dw ";
+    '  ELSE
+    '    PRINT #1;y%(j%)*4;",";
+    '  ENDIF
+    INC n%
+    '
+  NEXT j%
+  '
+  '  REPEAT
+  'UNTIL INKEY$=CHR$(27)
+  ' PRINT
+  '
+NEXT i%
+'
+
+'PRINT #1;"0";
+CLOSE #1
+'
+SCREEN 3
+EDIT
+'

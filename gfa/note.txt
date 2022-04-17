@@ -1,0 +1,16 @@
+In the early 90s I was pre-computing in GFA Basic my tables used in the ASM source.
+
+GFA Basic was a popular language on the Atari ST that was then ported to MS-DOS PC (GFA Basic 4.31).
+It was a structured basic that could be interpreted or compiled, similar to MS Visual Basic, except
+that GFA was already available on Atari in the end of the 80s.  
+
+https://en.wikipedia.org/wiki/GFA_BASIC
+
+http://gfabasic.net/
+
+archives on GFA are available at 
+
+https://docs.dev-docs.org/htm/search.php?find=gfa
+
+The GFA files in this folder were used to generate precomputed information.  Not sure if they
+correspond to the last release, but this is what I could find back on my 29 years old backup.

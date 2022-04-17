@@ -1,0 +1,20 @@
+CREDITS to:
+...........
+
+Thomas Mogensen (Drax) for composing this great "Crooner" Adlib chiptune
+Witan & their 1993 demo 'Facts of Life' for the scroller font
+AdLib player by JCH from Vibrants/Interface by Patch from Avalanche
+
+DOSBox team for the VGA compatibility mode that allows to run the intro.
+Harekiet/DOSBox team for notifying me during Evoke 2018 the VGA pixel 
+panning issue and the posts in the DOXBox-X github to highlight the root cause.
+https://github.com/joncampbell123/dosbox-x/issues/66
+https://github.com/joncampbell123/dosbox-x/commit/721f08f5b263d836ffe401bd214fb966eca71b0a
+
+
+
+
+
+
+
+

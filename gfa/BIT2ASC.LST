@@ -1,0 +1,34 @@
+'
+SCREEN 18
+'
+FILESELECT "c:\masm\data\*.*","",n$
+'
+OPEN "i",#1,n$
+'
+l%=LOF(#1)
+buf$=STRING$(l%,0)
+'
+BGET #1,V:buf$,l%
+'
+CLOSE #1
+'
+OPEN "o",#1,LEFT$(n$,LEN(n$)-3)+"ASC"
+'
+PRINT #1;" db ";
+'
+FOR i%=1 TO l%
+  '
+  a%=PEEK(V:buf$+i%-1)
+  IF (i% MOD 25)=0
+    PRINT #1;STR$(a%)
+    PRINT #1;" db ";
+  ELSE
+    PRINT #1;STR$(a%);",";
+  ENDIF
+  '
+NEXT i%
+'
+PRINT #1;"0"
+'
+CLOSE #1
+'
