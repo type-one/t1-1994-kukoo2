@@ -8,6 +8,7 @@ Released January 1994
 MS-Dos
 
 https://demozoo.org/productions/142610/
+
 https://files.scene.org/view/mirrors/hornet/code/demosrc/bbsintro/kuk2src.zip
 
 It was an Advertising Intro for Pleasure Access BBS, a belgian BBS located in Brussels in the 90s.
@@ -31,6 +32,7 @@ when I was in 1st year of Computer Sciences.  The next months I did test and fix
 VGA cards, until the published BBS and Internet release.
 
 The released intro was compressed using PKLITE (from what I remember)
+
 http://fileformats.archiveteam.org/wiki/PKLITE
 
 The source is a single x86 assembly language file (.ASM) that includes some precomputed tables and some assets
@@ -47,10 +49,13 @@ Use Windows and run **build.bat** in the src folder.
 One possibility is to use the legacy MASM assembler that Microsoft released for free a decade ago.
 
 Another is to use the free compatible JWasm assembler available here: 
+
 https://www.japheth.de/JWasm.html
 
 Instructions to use MASM 6.14 and LINKER 5.63 are available here:
+
 https://service.scs.carleton.ca/sivarama/asm_book_web/free_MASM.html
+
 http://www.masm32.com
 
 Microsoft's MASM 6.14 is included in the masm32 package.
