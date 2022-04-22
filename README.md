@@ -9,9 +9,12 @@ MS-Dos
 
 https://demozoo.org/productions/142610/
 
+https://www.youtube.com/watch?v=WVY6XuYTbG8
+
 https://files.scene.org/view/mirrors/hornet/code/demosrc/bbsintro/kuk2src.zip
 
-It was an Advertising Intro for Pleasure Access BBS, a belgian BBS located in Brussels in the 90s.
+It was an Advertising Intro that I did at 19 years old for Pleasure Access BBS, a belgian BBS located 
+in Brussels in the 90s.
 
 It was running on 90's VGA cards like Cirrus Logic, ATI, S3, Trident 9000/8900CL.  The typical 
 VGA graphic cards you had on 386/486 MS-DOS computers at that time.
